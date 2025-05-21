@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        img{
+            width: 350px;
+            height: 450px;
+        }
+        button
+        {
+            padding: 15px 60px;
+            border: none;
+            color: white;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+        #addToCart{
+            background-color: orange;
+        }
+        #save{
+            background-color: orangered;
+        }
+    </style>
+    <script>
+        function addToCart()
+        {
+            alert('Item is added to cart');
+        }
+    </script>
+</head>
+<body>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6536/6536330_sd.jpg;maxHeight=1920;maxWidth=900?format=webp" alt="Image of Camera">
+    <p>
+        <button id="addToCart" onclick="addToCart()">ADD TO CART</button>
+        <button id="save">SAVE</button>
+    </p>
+    <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button>
+    <hr/>
+</body>
+</html>

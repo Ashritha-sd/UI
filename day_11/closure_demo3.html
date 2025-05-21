@@ -1,0 +1,39 @@
+<script>
+    let account={accNo:12345,accBal:5000};
+    console.log(account.accNo, account.accBal);
+    account.accBal=-5000;
+    console.log(account.accNo, account.accBal);
+    
+    function openAccount(initialBal)
+    {
+        let accNo=111222;
+        let accBal=initialBal;
+
+        return {
+            displayInfo: function()
+            {
+                console.log(`AccNo:${accNo} has balance of Rs:${accBal}`);
+            },
+            deposit: function(amtToDeposit)
+            {
+                if (amtToDeposit<0)
+                {
+                    alert('Sorry cant accept negative money');
+                }
+                else{
+                accBal=accBal+amtToDeposit;
+                console.log(`AccNo:${accNo} has balance of Rs:${accBal}`);
+                }
+            }
+
+
+        }
+        
+    }
+    let encapsulatedAccount=openAccount(5000);
+    console.log(encapsulatedAccount);
+    encapsulatedAccount.displayInfo();
+    encapsulatedAccount.deposit(-5000);
+
+
+</script>

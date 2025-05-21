@@ -1,0 +1,24 @@
+<script>
+// 6. Ask user to enter a sequence of parantheses and validate 
+//    input: '([{ }])'
+//    output : true
+let input = prompt("Enter a sequence of parentheses:");
+let stack=[];
+let output=true;
+let matching={'(':')','[':']','{':'}'};
+for(ch of input)
+{
+    if(ch==='(' || ch==='[' || ch==='{')
+    {
+        stack.push(ch);
+    }
+    else if(Object.values(matching).includes(ch))
+    {
+        if (stack.length===0 || matching[stack.pop()]!==ch) {
+            output=false;
+            break;
+          }
+    }
+}
+console.log(output && stack.length === 0);
+</script>

@@ -1,0 +1,15 @@
+<script>
+    function add(a,b){
+
+        console.log(a+b+this.num)
+    }
+    add(2,3);
+    let obj1={num:4};
+    add.call(obj1,2,3);
+    add.call(obj1,2,4);    
+    add.call(obj1,1,5);
+    add.call(obj1,4,6);
+
+    let sum=add.bind(obj1);
+    sum(3,9);
+</script>

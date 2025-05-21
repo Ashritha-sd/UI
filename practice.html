@@ -1,0 +1,55 @@
+<!-- <script>
+    console.log("HI");
+    console.warn("Warning");
+    console.error("error");
+    console.assert(1>2, 'Assertion example');
+    let employees = [
+        { "eId": 101, "name": "sanjay", "sal": 5000, "gender": "male" },
+        { "eId": 104, "name": "geeta", "sal": 8000, "gender": "female" },
+        { "eId": 103, "name": "sameer", "sal": 7000, "gender": "male" },
+        { "eId": 102, "name": "sita", "sal": 9000, "gender": "female" },
+        { "eId": 105, "name": "deepak", "sal": 8000, "gender": "male" }
+    ];
+    console.log(employees);
+    console.table(employees);
+    console.time('myLoop');
+    for(let i=0;i<100;i++)
+    {
+        console.log('Hello',i);
+    }
+    console.timeEnd('myLoop')
+    document.write('HI')
+    document.write('Hello')
+    document.writeln("hello")
+    document.writeln("hi")
+
+    window.alert("this is an alert");
+    let userconfirm=confirm("Is it okay?");
+    console.log(userconfirm);
+    let name=prompt("enter your name");
+    console.log(name);
+    
+</script> -->
+
+<script>
+    let obj1 = { a: 10, b: 20 };
+    let obj2 = obj1;  // Reference Copy - Copy by address
+    obj1.a = 15;
+    obj2.b = 25;
+    console.log('obj1:', obj1); // {a: 15, b: 25}
+    console.log('obj2:', obj2); // {a: 15, b: 25}
+
+    let obj3 = { a: 10, b: 20, c: { d: 30 } };
+    let obj4 = { ...obj3 }; // shallow copy - copy by value (only top level values)
+    obj4.a = 15;
+    obj4.c.d = 35;
+    console.log('obj3:', obj3);
+    console.log('obj4:', obj4);
+
+    let obj5 = { a: 10, b: 20, c: { d: 30 } };
+    let obj6 = structuredClone(obj5) // deep copy - copy by value 
+    obj6.a = 15;
+    obj6.c.d = 35;
+    console.log('obj5:', obj5);
+    console.log('obj6:', obj6);
+</script>

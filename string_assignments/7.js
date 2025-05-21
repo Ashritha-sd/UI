@@ -1,0 +1,6 @@
+// 7. WAP to print Credit-card number
+//    input:- '1111222233334444'
+//    output:- '1111-2222-3333-4444'
+
+let input='1111222233334444';
+console.log(input.match(/[0-9]{1,4}/g).join('-'));

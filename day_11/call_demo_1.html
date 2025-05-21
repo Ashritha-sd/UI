@@ -1,0 +1,13 @@
+<script>
+    var num=10;
+    function add(a,b){
+        
+        //console.log(a,b,this);
+        console.log(this);
+        console.log(a+b+this.num)
+    }
+    add(2,3);
+    //add()
+    let obj1={num:4};
+    add.call(obj1,2,3);
+</script>

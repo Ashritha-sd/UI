@@ -1,0 +1,21 @@
+<script>
+    //9. Ask user to enter a roman string and convert that to integer value
+   //input:   IX    XII
+   //output : 9     12
+   let input=prompt("Enter a roman number");
+   let roman={'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000};
+   let val=0;
+   let output=0;
+   for(ch of input)
+   {
+        if(roman[ch]<=val)
+        {
+            output+=roman[ch];
+        }
+        else{
+            output+=roman[ch]-(2*val);
+        }
+        val=roman[ch];
+   }
+   console.log(output);
+</script>

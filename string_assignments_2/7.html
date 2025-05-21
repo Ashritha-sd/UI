@@ -1,0 +1,45 @@
+<!-- <script>
+// 7. Ask user to enter a 3 letter word, print all the permutations using those 3 letters.
+//     input: 'ABC'
+//     output: ABC , ACB , BCA, BAC ...
+let input = prompt("Enter a three letter word:");
+let q7 = function(str){
+    let s = "";
+    for(let i=0;i<str.length;i++){
+        s = s.concat(str.charAt(i));
+        for(let j=0;j<str.length;j++){
+            if(j != i){
+                s = s.concat(str.charAt(j));
+                for(let k=0;k<str.length;k++){
+                    if(k != i && k != j){
+                        s = s.concat(str.charAt(k));
+                        console.log(s);
+                        s = s.substring(0,s.length-1);
+                    }
+                }
+                s = s.substring(0,s.length-1);
+            }
+        }
+        s = s.substring(0,s.length-1);
+    }
+}
+q7(input);
+
+</script> -->
+
+<script>
+    function printPermutations(str, res='')
+    {
+        if(!str.length)
+        {
+            console.log(res);
+        }
+        for(let i=0;i<str.length;i++)
+        {
+            let rem_str=str.substr(0,i)+str.substr(i+1);
+            printPermutations(rem_str, res+str.charAt(i));
+        }
+    }
+    printPermutations('ABC');
+</script>
+
